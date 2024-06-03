@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* General page styling */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: linear-gradient(to right, #ce1c02, #075ffd);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header styling */
+h1 {
+
+    background: linear-gradient(to right,  #5bf2fc, #e0b168);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and button container */
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+#inputValue {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Add Todo button styling */
+/* .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+} */
+.btn {
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #9764f0, #e24b02);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #a6cd7d, #f0edf4); /* Background color change */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn:hover::before {
+    background: linear-gradient(to right, #ce1c02, #075ffd);
+}
+
+/* Todo list container styling */
+.todo-list-elem {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual todo item */
+.todo-list-elem div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Todo item text */
+.todo-list-elem li {
+    list-style: none;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Delete button */
+.deleteBtn {
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #9764f0, #e24b02);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.deleteBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fbfefe;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: -1;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+.deleteBtn:hover {
+    background: linear-gradient(to right, #a6cd7d, #f0edf4); /* Background color change */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+}
+
+.deleteBtn:hover::before {
+    background: linear-gradient(to right, #e10157, #d28b61);
+
+}
+
+/* Hover effect for todo items */
+.todo-list-elem div:hover {
+    background: linear-gradient(to right, #ce1c02, #075ffd);
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    
+    form {
+        padding: 10px;
+    }
+
+    form div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #inputValue { 
+        align-self: stretch;
+        margin: 10px 10px 10px 10px;
+    }
+
+    .btn {
+        margin: 10px 10px 10px 10px;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .todo-list-elem div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .deleteBtn {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
